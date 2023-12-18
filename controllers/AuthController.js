@@ -69,7 +69,10 @@ class AuthController {
 
     return res.json({
       success: true,
-      message: 'selamat anda berhasil login',
+      user: {
+        nama: checkNamaOrEmail[0][0].nama,
+        email: checkNamaOrEmail[0][0].email,
+      },
     });
   }
 }
